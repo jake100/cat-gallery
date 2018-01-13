@@ -1,0 +1,1 @@
+var getImageUrls = require('get-image-urls');
