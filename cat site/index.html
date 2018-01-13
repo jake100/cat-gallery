@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Cats</title>
+
+	  <style>
+			* { margin: 0; padding: 0; }
+			body { font: 13px Helvetica, Arial;}
+			.mySlides {height: 300px; width: 400px;}
+			
+		</style>
+		
+
+   </head>
+
+   <body>
+   <h1>Top Cats</h1>
+		<img class="mySlides" src="images/1.jpg">
+		<img class="mySlides" src="images/2.jpg">
+		<img class="mySlides" src="images/3.jpg">
+		<img class="mySlides" src="images/4.jpg">
+		<img class="mySlides" src="images/5.jpg">
+		<img class="mySlides" src="images/6.jpg">
+		<img class="mySlides" src="images/7.jpg">
+		<img class="mySlides" src="images/8.jpg">
+		<img class="mySlides" src="images/9.jpg">
+		<img class="mySlides" src="images/10.jpg">
+	<div class="w3-center">
+  <button class="w3-button" onclick="plusDivs(-1)">&#10094; Prev</button>
+  <button class="w3-button" onclick="plusDivs(1)">Next &#10095;</button>
+</div>
+	<script>
+		var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+		</script>
+
+   </body>
+</html>

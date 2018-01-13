@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Cats</title>
+
+	  <style>
+			* { margin: 0; padding: 0; }
+			body { font: 13px Helvetica, Arial;}
+
+			
+		</style>
+		
+		<script>
+		var Scraper = require ('images-scraper')
+  , google = new Scraper.Google();
+ 
+google.list({
+    keyword: 'cat',
+    num: 10,
+    detail: true,
+    nightmare: {
+        show: true
+    }
+})
+.then(function (res) {
+    console.log('first 10 results from google', res);
+}).catch(function(err) {
+    console.log('err', err);
+});
+ 
+// you can also watch on events 
+google.on('result', function (item) {
+    document.write(item);
+});
+		<script>
+
+   </head>
+
+   <body>
+   <h1>Top Cats</h1>
+
+
+   </body>
+</html>
