@@ -4,12 +4,18 @@
       <title>🐈</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <style>
-			* { margin: 0; padding: 0; box-sizing:border-box; resize: vertical;}
-			body { font: 13px Helvetica, Arial; background-image: url("back.png");}
-			.mySlides {width:60%; border-style: inset; margin: auto; border-radius: 4px; position: relative; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
-			.w3-button: {box-shadow: 0 9px #999; cursor: pointer;}
+			* { margin: 0; padding: 0; box-sizing:border-box;}
+			body {font: 13px Helvetica, Arial; background-image: url("back.png");}
+			.mySlides {overflow:scroll; float: left; 20px; width:50%; height: 50%;border-style: inset; border-radius: 4px; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
 			.w3-button:hover { background-color: #4CAF50; color: white; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
-}
+			.vertical-menu {float: left; bottom: 30px; left: 10px; top: 5px; width: 135px; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
+			.vertical-menu a {background-color: #eee; color: black; display: block; padding: 12px; text-decoration: none;}
+			.vertical-menu a:hover {background-color: #ccc;}
+			.vertical-menu a.active {background-color: #4CAF50; color: white;}
+			.container {margin-right: auto; margin-left: auto;}
+			h1{text-align: center; font-size: 38px; border-bottom: 5px solid black;margin: 15px 0px 5px 0px;}
+
+	}
 }
 			
 		</style>
@@ -18,7 +24,20 @@
    </head>
 
    <body>
-   <h1 >🐈Top 10 Cats</h1 >
+   <h1 >🐈Top 10 Cats🐈</h1>
+   
+
+		<div class="container">
+			<div class="vertical-menu">
+			<a href="#" class="active">Top 10 Cats</a>
+			<a href="#">Web Cats</a>
+			<a href="#">Cat Quotes</a>
+			<a href="#">Submit Your Cats</a>
+			<a href="#">Contact</a>
+			<button class="w3-button" onclick="plusDivs(-1)">&#10094; Prev</button>
+			<button class="w3-button" onclick="plusDivs(1)">Next &#10095;</button>
+		</div>
+
 		<img class="mySlides" src="images/1.jpg">
 		<img class="mySlides" src="images/2.jpg">
 		<img class="mySlides" src="images/3.jpg">
@@ -29,10 +48,10 @@
 		<img class="mySlides" src="images/8.jpg">
 		<img class="mySlides" src="images/9.jpg">
 		<img class="mySlides" src="images/10.jpg">
-	<div class="w3-center">
-  <button class="w3-button" onclick="plusDivs(-1)">&#10094; Prev</button>
-  <button class="w3-button" onclick="plusDivs(1)">Next &#10095;</button>
-</div>
+		</div>
+
+
+
 	<script>
 		var slideIndex = 1;
 showDivs(slideIndex);
