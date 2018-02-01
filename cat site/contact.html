@@ -1,20 +1,22 @@
-
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Twitter Cats</title>
+      <title>Cat Quotes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <style>
 	  <style>
 			.container {display: flex; justify-content: center; margin: auto;}
 			* { margin: 0; padding: 0; }
-body {font: 13px Helvetica, Arial; background-image: url("back.png");}
-			h1{border-style:groove;font-family: "Times New Roman", Times, serif; text-align: center; font-size: 38px; border-bottom: 5px solid black;margin: 15px 0px 5px 0px;}
+			body {font: 13px Helvetica, Arial; background-image: url("back.png");}
+			h1{border-style:groove; font-family: "Times New Roman", Times, serif; text-align: center; font-size: 38px; border-bottom: 5px solid black;margin: 15px 0px 5px 0px;}
+			
 			.menu {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
 			.menu a {background-color: #eee; color: black; display: block; padding: 12px; text-decoration: none;}
 			.menu a:hover {background-color: #ccc;}
 			.menu a.active {background-color: #4CAF50; color: white;}
-			.twitter-timeline {background-color: #ffffff;}
+			input {background-color: #eee; color: green; border-style:groove; }
+		
+
 		</style>
    </head>
 
@@ -22,23 +24,27 @@ body {font: 13px Helvetica, Arial; background-image: url("back.png");}
 
    </script>
    <body>
-   <h1 >Twitter Cats</h1>
+   <h1 >Cat Quotes</h1>
  <nav>
  		<div class="container">
 			<div class="menu">
 			<a href="index.html">Top 10 Cats</a>
-			<a href="#" class="active">Twitter Cats</a>
+			<a href="web.html">Twitter Cats</a>
 			<a href="quotes.html">Cat Quotes</a>
-			<a href="contact.html">Contact</a>
+			<a href="#" class="active">Contact</a>
 	
 		</div>
-
-<a class="twitter-timeline" href="https://twitter.com/grindsmash/lists/cats-of-twitter?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	
-
-</a>
+<form action="mailto:grindsmash@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
 </nav>
-
 
 	  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	  
